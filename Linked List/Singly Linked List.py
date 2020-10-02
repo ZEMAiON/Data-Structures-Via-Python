@@ -151,7 +151,7 @@ class SinglyLinkedList:
                 temp=temp.next
                 p+=1  
             print("Data updated successsfully")
-        if not_found:print("irrelevant position entered")
+        if not_found:print("Irrelevant position entered")
     
 	def reverselist(s,temp):
         # using recursion to print reverse
@@ -188,14 +188,14 @@ class SinglyLinkedList:
             while temp is not None:
                 l.append(temp.data) 
                 temp=temp.next
-        print(f"max value in list : {max(l)}\nmin value in list : {min(l)}\n")
+        print(f"Max value in list : {max(l)}\nMin value in list : {min(l)}\n")
     
 	def duplicateremoval(s):
         temp,curr,index=s.head,None,None
         #checks if list is empty 
         if s.head is None:print("UNDERFLOW!!")
         else:
-			# selecting a node and comparing that node with rest of linked list nodes if duplicacy found that node is being skipped
+	    # selecting a node and comparing that node with rest of linked list nodes if duplicacy found that node is being skipped
             while temp is not None:
                 curr=temp
                 index=temp.next
@@ -206,7 +206,7 @@ class SinglyLinkedList:
                         curr=index
                     index = index.next
                 temp=temp.next
-        print("Duplicate removed")
+       	    print("Duplicate removed")
     
 	def sortList(s):   
         # sorting is done on the basis of comparsion of two variables iterated over list 
@@ -263,7 +263,7 @@ class SinglyLinkedList:
             temp = node1.next   
             node1.next = node2.next   
             node2.next = temp  
-            print("Swapped Successfully")
+            print("Swapped successfully")
         else:  
             print("Swapping is not possible");
     
