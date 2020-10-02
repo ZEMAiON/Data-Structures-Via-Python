@@ -249,7 +249,7 @@ while True:
     print("1.inseretion from end\n2.insertion from front\n3.insertion at specified position\n4.list view\n5.deletion from end\n6.deletion from front\n7.deletion from specified position\n8.search of an element position\n9.updating element at specified position\n10.to see list in reverse order")
     print("11.to check whether list is palindrome or not\n12.to find max and min value\n13.to remove duplicate\n14.to sort the list\n15.exit\n")
     choice=int(input("UR choice : "))
-    if choice not in range(1,17)
+    if choice not in range(1,17):
         print("You opted out of provided options")
     else:
         if choice==1:d.insertionfromend()
@@ -261,7 +261,7 @@ while True:
         if choice==7:d.deletionfromspecifiedposition()
         if choice==8:d.searchingofposition()
         if choice==9:d.updateatspecifiedposition()
-        if choice==10:d.reverselist(s1.head)
+        if choice==10:d.reverselist(d.head)
         if choice==11:d.palindromecheck()
         if choice==12:d.maxandmin()
         if choice==13:d.duplicateremoval()
