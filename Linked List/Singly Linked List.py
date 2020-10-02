@@ -13,13 +13,14 @@ class SinglyLinkedList:
     # class to create singly linked list
     
 	def __init__(s):
-        s.head=None
+    	s.head=None
     
 	def insertionfromend(s):
         # checking whether list is empty
         if s.head == None:
             # creating a new node
             s.head=Node(int(input("Enter element to be inserted -> ")))
+			print("Inserted successfully")
         else:
             # creating a varible through which iteration will be done  
             temp=s.head
@@ -30,18 +31,21 @@ class SinglyLinkedList:
                 temp=temp.next
             # inserting data at the end
             temp.next=new_node
+			print("Inserted successfully")
     
 	def insertionfromfront(s):
         # checking whether list is empty
         if s.head is None:
             # creating a new node
             s.head=Node(int(input("Enter element to be inserted -> ")))
+			print("Inserted successfully")
         else:
             # creating a new node
             new_node=Node(int(input("Enter element to be inserted -> ")))
             # first linking new_node with the address stored in head and then assign new_node address in head
             new_node.next=s.head
             s.head=new_node
+			print("Inserted successfully")
     
 	def insertionatspecifiedposition(s):
             data,pos=[int(x) for x in input("Enter data n then position: ").split()]
@@ -49,11 +53,13 @@ class SinglyLinkedList:
             # checking whether list is empty
             if s.head is None:
                 s.head=Node(data)
+				print("Updated successfully")
             # checking if data is at position "1"
             elif pos==1:
                 new_node=Node(data)
                 new_node.next=s.head
                 s.head=new_node
+				print("Updated successfully")
             # iterating over and inserting at that appropriate position    
             elif s.head is not None:
                 p=1
@@ -66,6 +72,7 @@ class SinglyLinkedList:
                         not_found=false
                     temp=temp.next
                     p+=1
+				print("Updated successfully")
             if not_found:print("Out of range input")
     
 	def deletionfromend(s):
@@ -79,7 +86,7 @@ class SinglyLinkedList:
                 temp=temp.next
             # assign None in second last node address part 
             temp.next=None
-            print("element removed successfully")  
+            print("Element removed successfully")  
     
 	def deletionfromfront(s):
         # checking whether list is empty
@@ -89,7 +96,7 @@ class SinglyLinkedList:
             temp=s.head
             # assigning second node address to head 
             s.head=temp.next
-        print("element removed successfully")
+        print("Element removed successfully")
     
 	def deletionfromspecifiedposition(s):
         temp,p,not_found=s.head,1,True
@@ -99,6 +106,7 @@ class SinglyLinkedList:
         # checking whether deleting position is first node
         elif pos==1:
             s.head=temp.next
+			print("Element removed successfully")
         else:
             # checking over other nodes via iterating over deleting position 
             while temp is not None:
@@ -107,7 +115,7 @@ class SinglyLinkedList:
                     temp.next=temp.next.next
                 temp=temp.next
                 p+=1
-            print("element removed successfully") 
+            print("Element removed successfully")
         if not_found:print("Out of range input")
     
 	def searchingofposition(s):
@@ -133,6 +141,7 @@ class SinglyLinkedList:
         # checking whether position that is to be updated is first node
         elif pos==1:
             s.head.data=data_1
+			print("Data updated successsfully")
         else:
             # checking over other nodes via iterating over position to be updated
             while temp is not None:
